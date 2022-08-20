@@ -19,7 +19,10 @@
   Add Server
 </button>
 <!-- <p [innerText]="!allowNewServer"></p> -->
-<p>{{ serverCreationStatus }}</p>
-<app-server></app-server>
+<!-- <p>{{ serverCreationStatus }}</p> -->
+<p *ngIf="serverCreated">Server has been created, server name is {{serverName}}</p>
+
+<app-server *ngFor="let server of servers" ></app-server>
+
 <!-- we can add the above selector multiple times to repeat the content in any of the other htmls as below-->
-<app-server></app-server>
+<!-- <app-server></app-server> -->
